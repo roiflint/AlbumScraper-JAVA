@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<user>
+	<Directory>D:\Music</Directory>
+	<mailAccount>sender@gmail.com</mailAccount>
+	<mailPassword>password</mailPassword>
+	<mailRecipient>reciever@gmail.com</mailRecipient>
+</user>
