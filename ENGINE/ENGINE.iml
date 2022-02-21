@@ -8,8 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="jsoup-1.14.3" level="project" />
-    <orderEntry type="library" exported="" name="jaf" level="project" />
-    <orderEntry type="library" exported="" name="mail" level="project" />
     <orderEntry type="library" exported="" name="javax.mail" level="project" />
   </component>
 </module>

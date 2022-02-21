@@ -53,6 +53,7 @@ public class Engine implements engineInter {
         try {
             boolean check1 = false;
             boolean check2 = false;
+            boolean dataInTable = false;
             ArrayList<String> albums = new ArrayList<String>();
             Document document = null;
             document = Jsoup.connect(URL).get();
@@ -64,10 +65,18 @@ public class Engine implements engineInter {
                 if (check1 && element.tagName().equalsIgnoreCase("ul")) {
                     check2 = true;
                 }
-                if (check2 && element.tagName().equalsIgnoreCase("li")) {
+                else if(check1 && element.tagName().equalsIgnoreCase("table")){
+                    dataInTable = true;
+                }
+                if (check2 && !dataInTable && element.tagName().equalsIgnoreCase("li")) {
                     check1 = false;
                     albums.add(element.text().toUpperCase());
-                } else if (check2 && !check1 && element.tagName().equalsIgnoreCase("h2")) {
+                }
+                else if(check2 && dataInTable && element.tagName().equalsIgnoreCase("i")){
+                    check1 = false;
+                    albums.add(element.text().toUpperCase());
+                }
+                else if (check2 && (!check1 && element.tagName().equalsIgnoreCase("h2") || !check1 && element.tagName().equalsIgnoreCase("h3"))) {
                     return albums;
                 }
             }
