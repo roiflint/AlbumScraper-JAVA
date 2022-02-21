@@ -4,5 +4,5 @@
 	<Directory>D:\Music</Directory>
 	<mailAccount>sender@gmail.com</mailAccount>
 	<mailPassword>password</mailPassword>
-	<mailRecipient>reciever@gmail.com</mailRecipient>
+	<mailRecipient>receiver@gmail.com</mailRecipient>
 </user>
